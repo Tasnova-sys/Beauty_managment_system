@@ -14,8 +14,10 @@ if (isset($_POST['generate_report'])) {
                  SUM(CASE WHEN status = 'active' THEN 1 ELSE 0 END) as active_users,
                  SUM(CASE WHEN status = 'inactive' THEN 1 ELSE 0 END) as inactive_users
                  FROM users WHERE user_type = 'buyer'";
+
         $result = mysqli_query($conn, $query);
         $users_report = mysqli_fetch_assoc($result);
+        
     } elseif ($report_type == 'products') {
         $query = "SELECT COUNT(*) as total_products, 
                  SUM(CASE WHEN status = 'available' THEN 1 ELSE 0 END) as available,

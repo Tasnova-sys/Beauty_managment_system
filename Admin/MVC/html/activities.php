@@ -33,8 +33,6 @@ $total_pages = ceil($total_activities / $per_page);
                 <a href="users.php">Users</a>
                 <a href="products.php">Products</a>
                 <a href="activities.php">Activities</a>
-            
-            
                 <a href="reports.php">Reports</a>
                 <a href="profile.php">Profile</a>
                 <a href="../php/logout.php">Logout</a>
